@@ -1,3 +1,3 @@
 # bitlowsky.github.io
 
-Cute pets moved to https://bitlowsky.github.io/pet-images
+Cute Pets have moved [here](https://bitlowsky.github.io/pet-images)
