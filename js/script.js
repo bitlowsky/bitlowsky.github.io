@@ -1,8 +1,8 @@
 "use strict";
 
-getGitProfile(data);
+getGitProfile("bitlowsky");
 
-async function getGitProfile(data) {
+async function getGitProfile(userName) {
     let response = await fetch('https://api.github.com/users/' + userName);
     let data = await response.json();
 
