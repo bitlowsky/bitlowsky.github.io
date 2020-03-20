@@ -56,6 +56,10 @@ body{
     align-items: center;
 }
 
+#links .block{
+    margin: 20px 10px 0;
+}
+
 h2{
     font-size: 30px; 
     font-weight: 700 ;
