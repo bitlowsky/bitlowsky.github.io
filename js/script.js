@@ -1,6 +1,16 @@
 "use strict";
 
+document.getElementById('body').style.backgroundColor = getRandomColor()
 getGitProfile("bitlowsky");
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 
 async function getGitProfile(userName) {
     let response = await fetch('https://api.github.com/users/' + userName);
@@ -13,12 +23,4 @@ async function getGitProfile(userName) {
     if (data.location) {
         document.getElementById("git-location").innerText = data.location;
     }
-
-    if (data.bio) {
-        document.getElementById("git-bio").innerHTML = "<h2>bio</h2>";
-        document.getElementById("git-bio").onclick = function () {
-            document.getElementById("git-bio").innerText = data.bio;
-        }
-    }
-
 };
