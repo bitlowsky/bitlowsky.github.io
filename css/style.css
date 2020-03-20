@@ -7,18 +7,28 @@ body{
 
 .block{
     display: flex;
-    margin: 20px 5%;
-    padding: 20px;
     justify-content: center;
     align-items: center;
+    margin: 20px auto 0;
+    padding: 20px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.2);
+    animation: block-appear 1s linear;
+}
+
+#main.block{
+    width: 1000px;
+}
+
+#projects.block{
+    width: 1000px;
 }
 
 #main img{
     width: 200px;
     border-radius: 100%;
     border: 10px solid rgba(0, 0, 0, 0.2);
+    animation: block-appear 2s linear;
 }
 
 #git-info{
@@ -28,6 +38,7 @@ body{
 
 #git-info *{
     margin: 10px 0 0 0;
+    animation: text-appear 1s linear;
 }
 
 #projects{
@@ -36,6 +47,11 @@ body{
 
 #projects h2{
     margin: 0 0 20px;
+    animation: text-appear 1s linear;
+}
+
+#projects a{
+    animation: text-appear 1s linear;
 }
 
 #links{
@@ -54,10 +70,55 @@ a{
     color: white;
 }
 
+@keyframes block-appear{
+    0%{
+        max-width: 0%;
+        max-height: 0%;
+        opacity: 0;
+    }
+    100%{
+        max-width: 100%;
+        max-height: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes text-appear{
+    0%{
+        font-size: 0;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    #main.block{
+        width: 600px;
+    }
+    
+    #projects.block{
+        width: 600px;
+    }
+}
+
 @media screen and (max-width: 600px)
 {
+    body{
+        padding: 0 5%;
+    }
+    
+    #main.block{
+        width: auto;
+    }
+    
+    #projects.block{
+        width: auto;
+    }
+
     .block{
-        margin: 5%;
         flex-wrap: wrap;
     }
 
