@@ -1,0 +1,69 @@
+body{
+    /* background-color: rgb(70, 20, 120); */
+    background-color:darkcyan;
+    font-size: 20px;
+    font-family: "Roboto";
+    color: white;
+    height: auto;
+}
+
+.block{
+    display: flex;
+    margin: 20px 5%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#main img{
+    width: 200px;
+    border-radius: 100%;
+    border: 10px solid rgba(0, 0, 0, 0.2);
+}
+
+#git-info{
+    text-align: center;
+    margin: 0 20px;
+}
+
+#git-info *{
+    margin: 10px 0 0 0;
+}
+
+#projects{
+    flex-direction: column;
+}
+
+#projects h2{
+    margin: 0 0 20px;
+}
+
+#links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-size: 30px; 
+    font-weight: 700 ;
+}
+
+a{
+    white-space: nowrap;
+    color: white;
+}
+
+@media screen and (max-width: 600px)
+{
+    .block{
+        margin: 5%;
+        flex-wrap: wrap;
+    }
+
+    #links{
+        flex-wrap: wrap;
+    }
+}
