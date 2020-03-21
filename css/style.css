@@ -27,7 +27,7 @@ body{
 #main img{
     width: 200px;
     border-radius: 100%;
-    border: 10px solid rgba(0, 0, 0, 0.2);
+    border: 15px solid rgba(0, 0, 0, 0.2);
     animation: block-appear 1s linear;
 }
 
@@ -37,9 +37,9 @@ body{
 }
 
 #git-info *{
-    margin: 10px 0 0 0;
-    animation: text-appear 1s linear;
+    margin: 10px 0;
     white-space: nowrap;
+    animation: text-appear 1s linear;
 }
 
 #projects{
@@ -56,8 +56,11 @@ body{
     align-items: center;
 }
 
-#links .block{
+#links a{
+    padding: 10px;
     margin: 20px 10px 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 h2{
@@ -107,7 +110,7 @@ a{
 @media screen and (max-width: 600px)
 {
     body{
-        padding: 0 5%;
+        padding: 0 20px;
     }
     
     #main.block{
