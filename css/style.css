@@ -9,19 +9,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 1000px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.2);
     animation: block-appear 1s linear;
-}
-
-#main.block{
-    width: 1000px;
-}
-
-#projects.block{
-    width: 1000px;
 }
 
 #main img{
@@ -40,6 +33,18 @@ body{
     margin: 10px 0;
     white-space: nowrap;
     animation: text-appear 1s linear;
+}
+
+#bio {
+    flex-direction: column;
+}
+
+#bio *{
+    animation: text-appear 1s linear;
+}
+
+#git-bio{
+    margin: 10px auto 0;
 }
 
 #projects{
@@ -98,11 +103,7 @@ a{
 
 @media screen and (max-width: 1000px)
 {
-    #main.block{
-        width: 600px;
-    }
-    
-    #projects.block{
+    .block{
         width: 600px;
     }
 }
@@ -112,16 +113,9 @@ a{
     body{
         padding: 0 20px;
     }
-    
-    #main.block{
-        width: auto;
-    }
-    
-    #projects.block{
-        width: auto;
-    }
 
     .block{
+        width: auto;
         flex-wrap: wrap;
     }
 

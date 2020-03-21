@@ -29,6 +29,10 @@ async function getGitProfile(userName) {
     if (data.location) {
         document.getElementById("git-location").innerText = data.location;
     }
+
+    if (data.bio) {
+        document.getElementById("git-bio").innerText = data.bio;
+    }
 };
 
 function fallback() {
@@ -49,5 +53,9 @@ function fallback() {
 
     if (data.location) {
         document.getElementById("git-location").innerText = data.location;
+    }
+
+    if (data.bio) {
+        document.getElementById("git-bio").innerText = data.bio;
     }
 }
