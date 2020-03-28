@@ -21,9 +21,9 @@ body{
 
 #header img{
     width: 200px;
+    padding: 5px;
     border-radius: 100%;
     border: 5px dotted #1da1f2;
-    padding: 5px;
     animation: block-appear 1s linear;
 }
 
@@ -41,15 +41,15 @@ body{
 #tabs{
     display: flex;
     border-bottom: 1px solid #38444d;
-    height: 50px;
 }
 
 #tabs a{
     display: flex;
     justify-content: center;
-    flex: 50%;
-    font-size: 30px;
-    padding: 10px;
+    align-items: center;
+    flex: 33.333%;
+    height: 50px;
+    font-size: 25px;
     color: #8899a6;
 }
 

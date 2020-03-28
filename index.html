@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="css/zero.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Bitlowsky Main Page</title>
+    <title>Bitlowsky</title>
 </head>
 
-<body id="body">
+<body>
     <div id="main">
         <div id="header">
             <img id="git-avatar">
@@ -21,17 +21,22 @@
         </div>
 
         <div id="tabs">
+            <a href="#" id="about-me-tab" onclick="hideExclude('about-me')">About me</a>
             <a href="#" id="projects-tab" onclick="hideExclude('projects')">Projects</a>
-            <a href="#" id="contacts-tab" onclick="hideExclude('contacts')">Contacts</a>
+            <a href="#" id="links-tab" onclick="hideExclude('links')">Links</a>
+        </div>
+
+        <div id="about-me" class="content">
+            <p id="git-bio"></p>
         </div>
 
         <div id="projects" class="content">
-            <h2>Projects</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, voluptatibus. Illo quibusdam, nulla
+                asperiores magni non eum qui veniam aut nostrum explicabo illum numquam beatae consectetur ipsa
+                distinctio. Omnis, error.</p>
         </div>
 
-        <div id="contacts" class="content">
-            <h2>Contacts</h2>
-        </div>
+        <div id="links" class="content"></div>
 
     </div>
     <script src="js/script.js"></script>
