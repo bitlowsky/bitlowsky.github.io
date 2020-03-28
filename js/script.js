@@ -1,21 +1,42 @@
 "use strict";
 
-document.getElementById('body').style.backgroundColor = getRandomColor()
-
 getGitProfile("bitlowsky");
+
+selectTab("projects-tab")
 
 if (!document.getElementById("git-avatar").getAttribute("src")) {
     fallback();
 }
 
+function selectTab(id) {
+    let tags = document.getElementsByClassName("tab");
 
-function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
+    for (const tag in tags) {
+        if (tags.hasOwnProperty(tag)) {
+            const element = tags[tag];
+            if (element.id != id) {
+                document.getElementById(element.id).style.border = "none";
+                document.getElementById(element.id).style.color = "#8899a6";
+            }
+        }
     }
-    return color;
+    document.getElementById(id).style.color = "#1da1f2";
+    document.getElementById(id).style.borderBottom = "2px solid #1da1f2";
+    hideExclude(id.replace("-tab", ''));
+}
+
+function hideExclude(id) {
+    let tags = document.getElementsByClassName("content");
+
+    for (const tag in tags) {
+        if (tags.hasOwnProperty(tag)) {
+            const element = tags[tag];
+            if (element.id != id) {
+                document.getElementById(element.id).style.display = "none";
+            }
+        }
+    }
+    document.getElementById(id).style.display = "block";
 }
 
 async function getGitProfile(userName) {

@@ -6,31 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="css/zero.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Bitlowsky Main Page</title>
+    <title>Bitlowsky</title>
 </head>
 
-<body id="body">
-    <div id="main" class="block">
-        <img id="git-avatar">
-        <div id="git-info">
-            <h2 id="git-name"></h2>
-            <div id="git-username"></div>
-            <div id="git-location"></div>
+<body>
+    <div id="main">
+        <div id="header">
+            <img id="git-avatar">
+            <div id="git-info">
+                <h2 id="git-name"></h2>
+                <div id="git-username"></div>
+                <div id="git-location"></div>
+            </div>
         </div>
-    </div>
 
-    <div id="bio" class="block">
-        <h2>Bio</h2>
-        <p id="git-bio"></p>
-    </div>
-
-    <div id="projects" class="block">
-        <h2>Projects</h2>
-        <div id="links">
-            <a href="pet-images" target="_blank" rel="noopener noreferrer">Pet-images</a>
+        <div id="tabs">
+            <a href="#" id="about-me-tab" class="tab" onclick="selectTab('about-me-tab')">Info</a>
+            <a href="#" id="projects-tab" class="tab" onclick="selectTab('projects-tab')">Projects</a>
+            <a href="#" id="links-tab" class="tab" onclick="selectTab('links-tab')">Links</a>
         </div>
-    </div>
 
+        <div id="about-me" class="content">
+            <p id="git-bio"></p>
+        </div>
+
+        <div id="projects" class="content">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, voluptatibus. Illo quibusdam, nulla
+                asperiores magni non eum qui veniam aut nostrum explicabo illum numquam beatae consectetur ipsa
+                distinctio. Omnis, error.</p>
+        </div>
+
+        <div id="links" class="content"></div>
+
+    </div>
     <script src="js/script.js"></script>
 </body>
 
