@@ -27,8 +27,12 @@ body{
     animation: block-appear 1s linear;
 }
 
-#git-info *{
+#git-info {
     margin: 10px 20px;
+}
+
+#git-info *{
+    margin: 10px 0;
     text-align: center;
     white-space: nowrap;
     color: #8899a6;
@@ -95,5 +99,6 @@ a{
     #header{
         flex-direction: column;
         flex-wrap: wrap;
+        padding-bottom: 0;
     }
 }
