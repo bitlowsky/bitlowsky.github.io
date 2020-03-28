@@ -17,7 +17,6 @@ body{
     justify-content: center;
     align-items: center;
     padding: 20px;
-    outline: 1px solid #38444d;
 }
 
 #header img{
@@ -39,6 +38,31 @@ body{
     color: white;
 }
 
+#tabs{
+    display: flex;
+    border-bottom: 1px solid #38444d;
+    height: 50px;
+}
+
+#tabs a{
+    display: flex;
+    justify-content: center;
+    flex: 50%;
+    font-size: 30px;
+    padding: 10px;
+    color: #8899a6;
+}
+
+#tabs a:focus{
+    color: #1da1f2;
+    border-bottom: 2px solid #1da1f2;
+}
+
+.content{
+    padding: 20px;
+    text-align: center;
+}
+
 h2{
     font-size: 30px; 
     font-weight: 700 ;
@@ -46,7 +70,6 @@ h2{
 
 a{
     white-space: nowrap;
-    color: #1da1f2;
 }
 
 @keyframes block-appear{

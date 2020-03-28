@@ -1,21 +1,24 @@
 "use strict";
 
-document.getElementById('body').style.backgroundColor = getRandomColor()
-
-getGitProfile("bitlowsky");
+// getGitProfile("bitlowsky");
+hideExclude("projects");
 
 if (!document.getElementById("git-avatar").getAttribute("src")) {
     fallback();
 }
 
+function hideExclude(id) {
+    let tags = document.getElementsByClassName("content");
 
-function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
+    for (const tag in tags) {
+        if (tags.hasOwnProperty(tag)) {
+            const element = tags[tag];
+            if (element.id != id) {
+                document.getElementById(element.id).style.display = "none";
+            }
+        }
     }
-    return color;
+    document.getElementById(id).style.display = "block";
 }
 
 async function getGitProfile(userName) {
