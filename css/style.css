@@ -55,6 +55,9 @@ body{
 
 .content{
     padding: 20px;
+}
+
+.content #git-bio{
     text-align: center;
 }
 
@@ -85,10 +88,12 @@ a{
     #main{
         width: auto;
     }
+}
 
+@media screen and (max-width: 510px)
+{
     #header{
         flex-direction: column;
         flex-wrap: wrap;
     }
-    
 }
