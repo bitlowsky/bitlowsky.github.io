@@ -1,10 +1,28 @@
 "use strict";
 
-// getGitProfile("bitlowsky");
-hideExclude("projects");
+getGitProfile("bitlowsky");
+
+selectTab("projects-tab")
 
 if (!document.getElementById("git-avatar").getAttribute("src")) {
     fallback();
+}
+
+function selectTab(id) {
+    let tags = document.getElementsByClassName("tab");
+
+    for (const tag in tags) {
+        if (tags.hasOwnProperty(tag)) {
+            const element = tags[tag];
+            if (element.id != id) {
+                document.getElementById(element.id).style.border = "none";
+                document.getElementById(element.id).style.color = "#8899a6";
+            }
+        }
+    }
+    document.getElementById(id).style.color = "#1da1f2";
+    document.getElementById(id).style.borderBottom = "2px solid #1da1f2";
+    hideExclude(id.replace("-tab", ''));
 }
 
 function hideExclude(id) {

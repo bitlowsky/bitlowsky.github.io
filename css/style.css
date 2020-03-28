@@ -53,11 +53,6 @@ body{
     color: #8899a6;
 }
 
-#tabs a:focus{
-    color: #1da1f2;
-    border-bottom: 2px solid #1da1f2;
-}
-
 .content{
     padding: 20px;
     text-align: center;
@@ -92,6 +87,7 @@ a{
     }
 
     #header{
+        flex-direction: column;
         flex-wrap: wrap;
     }
     
